@@ -1,0 +1,217 @@
+/* Existing CSS rules */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #00f260;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1e1e2f;
+}
+
+.alarm {
+    border: 3px solid #00f260;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    background: #0f2027;
+    transition: background 0.5s, box-shadow 0.5s;
+}
+
+.alarm:hover {
+    background: #203a43;
+    box-shadow: 0 0 25px #00f260;
+}
+
+.datetime {
+    color: #ffffff;
+    width: 380px;
+    padding: 20px;
+    text-align: center;
+}
+
+.date {
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+}
+
+.time {
+    font-size: 72px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.time span {
+    margin: 0 5px;
+}
+
+.time span:last-child {
+    background: #00f260;
+    padding: 5px 15px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 36px;
+}
+
+hr {
+    border: 1px solid #00f260;
+    margin: 20px auto;
+    width: 90%;
+}
+
+.setAlarm {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.column select {
+    background: #0f2027;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #00f260;
+    border-radius: 18px;
+    font-size: 16px;
+    margin-right: 10px;
+    width: 80px;
+}
+
+#btn-setAlarm, .btn-delete, #stopAlarm {
+    padding: 10px;
+    color: #ffffff;
+    background: #00f260;
+    border: none;
+    border-radius: 18px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+#stopAlarm {
+    visibility: hidden;
+    width: 140px;
+    margin: 10px auto;
+    display: block;
+}
+
+.btn-delete {
+    margin-left: 20px;
+}
+
+#btn-setAlarm:hover, .btn-delete:hover, #stopAlarm:hover {
+    background: #32e379;
+    box-shadow: 0 0 15px #32e379;
+}
+
+h3 {
+    color: #ffffff;
+    font-size: 26px;
+    font-weight: 900;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.alarmList {
+    color: #ffffff;
+    margin: 20px auto;
+    padding: 0 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+
+.alarmLog {
+    font-size: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    padding: 10px;
+    background: #203a43;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.alarmLog span {
+    flex: 1;
+}
+
+.alarmLog button {
+    background: #ff416c;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+.alarmLog button:hover {
+    background: #ff6584;
+    box-shadow: 0 0 15px #ff6584;
+}
+
+/* New styles for video container and buttons */
+.videoContainer {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.controls {
+    margin-top: 10px;
+}
+
+.controls button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background: #00f260;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+.controls button:hover {
+    background: #32e379;
+    box-shadow: 0 0 10px #32e379;
+}
+
+.controls button:active {
+    background: #1e8e60;
+}
